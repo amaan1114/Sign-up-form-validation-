@@ -44,6 +44,9 @@ $(document).ready(function() {
   $('#Signup').click(function() {
     if (signUp == true) {
       if($('#FirstName').val()){
+        if($('#Numer').val().toString().length==10&&$('#Numer').val()>0){
+
+
         
         if(ValidateEmail($('#Email').val())==true){
             if(validatePassword($('#password').val())==="Valid"){
@@ -84,6 +87,20 @@ $(document).ready(function() {
                         $('#Warning').hide(1000);
                     }, 3000);
                 });
+        }
+        }else{
+            
+            $('#Warning').html("Invalid Phone Number")
+                $('#Warning').css({
+                    'background-color': 'red',
+
+                })
+                $('#Warning').show(500, function() {
+                    setTimeout(() => {
+                        $('#Warning').hide(1000);
+                    }, 3000);
+                });
+
         }
       }else{
         $('#Warning').html("Please enter your first name")
@@ -137,6 +154,8 @@ $(document).ready(function() {
         })        
         $('#FirstName').show(500)
         $('#LastName').show(500)
+        $('#Numer').show(500)
+
         signUp=true
     }
   });
@@ -145,6 +164,7 @@ $(document).ready(function() {
         $('h1').html("Hey Look Who is Back!")
         $('#FirstName').hide(500)
         $('#LastName').hide(500)
+        $('#Numer').hide(500)
         $('.SignUpCard').css({
             'transform-style': 'preserve-3d',
             'transform': 'rotateY(180deg)',
