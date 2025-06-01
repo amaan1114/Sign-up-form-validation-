@@ -172,6 +172,7 @@ $(document).ready(function() {
         $('#FirstName').show(500)
         $('#LastName').show(500)
         $('#Numer').show(500)
+        $('#Confirmpassword').show(500)
 
         signUp=true
     }
@@ -182,6 +183,7 @@ $(document).ready(function() {
         $('#FirstName').hide(500)
         $('#LastName').hide(500)
         $('#Numer').hide(500)
+        $('#Confirmpassword').hide(500)
         $('.SignUpCard').css({
             'transform-style': 'preserve-3d',
             'transform': 'rotateY(180deg)',
