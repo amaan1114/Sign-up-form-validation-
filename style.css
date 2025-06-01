@@ -31,7 +31,7 @@ body{
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: center;
-    gap: 4.0rem;
+    gap: 3.0rem;
     transition: 0.8s;
 } 
 .textinput{

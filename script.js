@@ -50,16 +50,33 @@ $(document).ready(function() {
         
         if(ValidateEmail($('#Email').val())==true){
             if(validatePassword($('#password').val())==="Valid"){
-                 $('#Warning').html('Sign Up Successful!')
-                $('#Warning').css({
-                    'background-color':'green',
+                if($('#password').val()===$('#Confirmpassword').val()){
+                      $('#Warning').html('Sign Up Successful!')
+                    $('#Warning').css({
+                        'background-color':'green',
 
-                })
-                $('#Warning').show(500, function() {
-                    setTimeout(() => {
-                        $('#Warning').hide(1000);
-                    }, 3000);
-                });
+                    })
+                    $('#Warning').show(500, function() {
+                        setTimeout(() => {
+                            $('#Warning').hide(1000);
+                        }, 3000);
+                    });
+
+                }else{
+                    
+                    $('#Warning').html("Password does not match!")
+                    $('#Warning').css({
+                        'background-color': 'red',
+
+                    })
+                    $('#Warning').show(500, function() {
+                        setTimeout(() => {
+                            $('#Warning').hide(1000);
+                        }, 3000);
+                    });
+
+                }
+               
 
                 
 
@@ -203,5 +220,12 @@ $(document).ready(function() {
 
   })
 });
+
+
+function limitDigits(input, maxLength) {
+    if (input.value.length > maxLength) {
+      input.value = input.value.slice(0, maxLength);
+    }
+}
 
 
