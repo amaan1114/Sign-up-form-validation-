@@ -1,5 +1,49 @@
 
 $(document).ready(function() {
+    const pass =$('#password')
+        const toggle1 = $('.showpassword')
+      
+        toggle1.click(function () {
+    const passInput = $('#password'); // select the input element
+
+    const type = passInput.attr('type') === 'password' ? 'text' : 'password';
+    passInput.attr('type', type);
+
+    // Change icon/text
+    $(this).text(type === 'password' ? '👁️' : '🙈');
+    
+    });
+
+
+   
+
+
+
+
+        const pas2 =$('#Confirmpassword')
+        const toggle2 = $('#showpass2')
+        toggle2.click(function () {
+    const passInput = $('#Confirmpassword'); // select the input element
+
+    const type = passInput.attr('type') === 'password' ? 'text' : 'password';
+    passInput.attr('type', type);
+
+    // Change icon/text
+    $(this).text(type === 'password' ? '👁️' : '🙈');
+    
+    });
+
+
+
+
+
+
+
+
+
+
+
+
 
     var signUp=true
     $("#Warning").hide()
@@ -173,7 +217,8 @@ $(document).ready(function() {
         $('#LastName').show(500)
         $('#Numer').show(500)
         $('#Confirmpassword').show(500)
-
+        $("#showpass2").show(500)
+         $('#flipshow').attr('id', 'showpass1');
         signUp=true
     }
   });
@@ -184,6 +229,8 @@ $(document).ready(function() {
         $('#LastName').hide(500)
         $('#Numer').hide(500)
         $('#Confirmpassword').hide(500)
+        $("#showpass2").hide(500)
+        $('#showpass1').attr('id', 'flipshow');
         $('.SignUpCard').css({
             'transform-style': 'preserve-3d',
             'transform': 'rotateY(180deg)',

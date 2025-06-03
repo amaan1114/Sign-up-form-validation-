@@ -34,6 +34,23 @@ body{
     gap: 3.0rem;
     transition: 0.8s;
 } 
+
+.passwordwrapper{
+    display: flex;
+    justify-content: center;
+    
+    position: relative;
+    
+    width: 30rem;
+    height: 6.5rem;
+    border-radius: 6%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 3.0rem;
+    transition: 0.8s;
+
+}
 .textinput{
     
 
@@ -65,7 +82,7 @@ input::placeholder{
     
 
 }
-button{
+#Signup,#Signin{
     border: 2px solid white;
     border-radius: 20px;
     color: white;
@@ -75,7 +92,8 @@ button{
     transition: 0.7s;
     
 }
-button:hover{
+#Signin:hover,
+#Signup:hover{
     background-color: white;
     color: black;
 }
@@ -89,4 +107,45 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+.showpassword{
+    position: absolute;
+    top: 8%;
+    right: 10%;
+    transform: translateY(-50%);
+    transform-style:preserve-3d;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+
+}
+
+.showpassword2{
+    position: absolute;
+    top: 90%;
+     right: 10%;
+    transform: translateY(-50%);
+     transform-style:preserve-3d;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+
+}
+
+#flipshow{
+     position: absolute;
+    top: 40%;
+    left: 10%;
+    right: 80%;
+    transform: translateY(-50%);
+    transform-style:preserve-3d;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+
+
 }

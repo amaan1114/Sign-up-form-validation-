@@ -23,10 +23,18 @@
             <input type="text" name="LastName" id="LastName" placeholder="Enter your Last Name" class="textinput">
             <input type="number" name="Ph.Number" id="Numer" placeholder="Enter Phone number" class="textinput" min="0" oninput="limitDigits(this,10)" required >
             <input type="text" name="Email" id="Email" placeholder="Enter email address" class="textinput" required>
-            <input type="password" name="password" id="password" placeholder="Enter password" class="textinput" required>
-            <input type="password" name="Confirmpassword" id="Confirmpassword" placeholder="Confirm password" class="textinput" required>
+            <div class="passwordwrapper">
+                 
+                <input type="password"  name="password" id="password" placeholder="Enter password" class="textinput" required> 
+                <button class="showpassword" id="showpass1">👁️</button>
+                
+                <button class="showpassword2" id="showpass2">👁️</button>
+                <input type="password" name="Confirmpassword" id="Confirmpassword" placeholder="Confirm password" class="textinput" required>
             
-            <div class="buttons">
+       
+
+            </div>
+                <div class="buttons">
                 <button id="Signup">Sign up</button>
                 <button id="Signin">Sign in</button>
             </div>
